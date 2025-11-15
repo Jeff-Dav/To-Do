@@ -1,0 +1,355 @@
+/* ===============================================
+   Estilos de Tareas
+   =============================================== */
+
+/* Task List Container */
+.task-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.task-list-header h1 {
+  font-size: 2rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Task Filters */
+.task-filters {
+  margin-bottom: var(--spacing-xl);
+}
+
+.filters-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: var(--spacing-md);
+  align-items: end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-label {
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.filter-actions {
+  display: flex;
+  align-items: flex-end;
+}
+
+.btn-clear {
+  white-space: nowrap;
+}
+
+/* Tasks Stats */
+.tasks-stats {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-item {
+  color: #6C757D;
+  font-size: 0.95rem;
+}
+
+.stat-item strong {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+/* Task Sections */
+.tasks-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.task-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* Task Item */
+.task-item {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border-left: 4px solid var(--color-primary);
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.task-completed {
+  opacity: 0.7;
+  border-left-color: var(--estado-completada);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+.task-title {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.completed-title {
+  text-decoration: line-through;
+  color: #6C757D;
+}
+
+.task-badges {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.priority-badge,
+.status-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-alta {
+  background-color: #ffebee;
+  color: var(--priority-alta);
+}
+
+.priority-media {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.priority-baja {
+  background-color: #e8f5e9;
+  color: var(--priority-baja);
+}
+
+.status-pendiente {
+  background-color: #f5f5f5;
+  color: var(--estado-pendiente);
+}
+
+.status-en-progreso {
+  background-color: #e3f2fd;
+  color: var(--estado-progreso);
+}
+
+.status-completada {
+  background-color: #e8f5e9;
+  color: var(--estado-completada);
+}
+
+.task-description {
+  color: #6C757D;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+.task-meta {
+  margin-bottom: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.task-date {
+  font-size: 0.9rem;
+  color: #6C757D;
+}
+
+.task-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.task-actions .btn {
+  flex: 1;
+  min-width: fit-content;
+  font-size: 0.85rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.btn-status {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-edit {
+  background-color: var(--color-warning);
+  color: var(--color-text);
+}
+
+.btn-delete {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: #6C757D;
+  color: var(--color-white);
+}
+
+/* Task Form */
+.task-form-container {
+  max-width: 700px;
+  margin: var(--spacing-xl) auto;
+  padding: 0 var(--spacing-md);
+}
+
+.task-form-card {
+  padding: var(--spacing-xl);
+}
+
+.task-form-title {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+.form-actions .btn {
+  min-width: 120px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.empty-state h2 {
+  font-size: 1.5rem;
+  color: #6C757D;
+  margin-bottom: var(--spacing-md);
+}
+
+.empty-state p {
+  color: #6C757D;
+  margin-bottom: var(--spacing-lg);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #6C757D;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .task-list-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: stretch;
+  }
+  
+  .task-list-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .filters-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tasks-stats {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+  
+  .task-actions {
+    flex-direction: column;
+  }
+  
+  .task-actions .btn {
+    width: 100%;
+  }
+}
